@@ -11,6 +11,9 @@ stages:
   jobs:
   - job: Build
     steps:
+    - task: CMakeToolInstaller@1
+      inputs:
+        cmakeVersion: '3.10'
     - task: PowerShell@2
       inputs:
         targetType: 'inline'
