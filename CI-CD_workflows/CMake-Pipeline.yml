@@ -11,9 +11,7 @@ stages:
   jobs:
   - job: Build
     steps:
-    - task: PowerShell@2
+    - task: CMakeToolInstaller@1
       inputs:
-        targetType: 'inline'
-        script: |
-          . ./second.ps1
-          Build-Proj
+        cmakeVersion: '3.21.x'  # Specify the version of CMake you want to install
+        addToPath: true 
