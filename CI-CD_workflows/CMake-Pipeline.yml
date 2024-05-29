@@ -11,6 +11,9 @@ stages:
   jobs:
   - job: Build
     steps:
-    - script: |
-        cmake .
-      displayName: 'Configure Project with CMake'
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          . ./second.ps1
+          Build-Proj
