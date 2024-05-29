@@ -3,9 +3,7 @@ function Setup-Env {
 }
 
 function Build-Proj {
-    #Write-Host "Building Project"
-    Write-Output "Invoking CMake"
-    cmake .
+    Write-Host "Building Project"
 }
 
 function Release-Build {
