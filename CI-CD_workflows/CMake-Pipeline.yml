@@ -15,5 +15,5 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          . ./init.ps
+          . ./init.ps1
           Build-Proj
